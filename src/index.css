@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins",sans-serif;
+  color: white;
+  background-color: #252525;
+}
+header{
+  background-color: #373b69;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.buttondiv{
+  display: flex;
+  margin: auto;
+}
+.menubuttondiv{
+  display: flex;
+  flex-direction: column;
+}
+.buttondiv button{
+  margin-left: 2%;
+  white-space: nowrap;
+}
+.menubuttondiv button{
+  background: transparent;
+  color:white;
+  cursor: pointer;
+  font-size: 17px;
+}
+.menubuttondiv button:hover{
+  color:blue;
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -ms-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+}
+.display{
+  display: none;
+}
+.buttondiv button:hover{
+  color:black;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+header button{
+  background: transparent;
+  border:none;
+  cursor: pointer;
+  color:white;
+  font-size: 18px;
+}
+.search{
+  font-family: inherit;
+  font-size: 1.2rem;
+  border:2px solid #22254b;
+  border-radius: 50px;
+  background-color: transparent;
+  color:white;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+}
+.search:focus{
+  outline: none;
+}
+.tag{
+  background-color: #22254b;
+  padding: 0.5rem;
+  font-size: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.tag.green{
+  color:green;
+}
+.tag.orange{
+  color:orange;
+}
+.tag.red{
+  color:red;
+}
+.root{
+  display: flex;
+  flex-direction: column;
+}
+.movie{
+  background-color: #373b69;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  margin: 1rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.movie-over{
+  position: absolute;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color:#22254b;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+}
+.text-center{
+  text-align: center;
+}
+.movie-popularity{
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  color:green;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+}
+.movie-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movie img{
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+}
+.movie-info{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-info h3{
+  margin: 0;
+}
+.movie:hover .movie-over{
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+}
+.movie:hover .movie-popularity{
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+}
+.menu-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+.menu-bar span{
+  width: 20px;
+  height: 4px;
+  background-color:white;
+  margin-bottom: 4px;
+}
+@media screen and (max-width:1012px) {
+    .search{
+      font-size: 0.9rem;
+      padding: 0.25rem 1.2rem;
+    }
+    header button{
+      font-size: 16px;
+    }
+}
+@media screen and (max-width:872px) {
+    .buttondiv{
+      display: none;
+    }
+    .menu-bar{
+      display: flex;
+    }
+}
